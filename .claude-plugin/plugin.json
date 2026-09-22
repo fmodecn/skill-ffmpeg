@@ -1,0 +1,8 @@
+{
+  "name": "skill-ffmpeg",
+  "description": "Run ffmpeg/ffprobe for audio & video processing via a bundled static binary (ffmpeg-static). No system ffmpeg install required. Transcode, extract audio, grab frames, trim, compress, and probe media.",
+  "version": "0.1.2",
+  "author": {
+    "name": "fmode"
+  }
+}
