@@ -4,9 +4,9 @@ description: "使用内置的静态 ffmpeg/ffprobe 二进制处理音视频，�
 description_en: "Process audio & video with a bundled static ffmpeg/ffprobe binary (no system install). Use for: (1) format conversion/transcoding, (2) extracting audio tracks for transcription, (3) extracting video frames, (4) trimming/concatenating/compressing, (5) probing duration/bitrate/stream info with ffprobe"
 version: 1.1.0
 author: Yuyang001 (FmodeAgent)
-license: MIT
+license: MPL-2.0
 copyright: "Copyright (c) 2026 未来飞马 Fmode"
-tags: [未来飞马, 智能体技能, 超级技能, 服务级, 音频处理, FmodeAgent, FmodeCode, ffmpeg, ffprobe, transcode, extract-audio]
+tags: [未来飞马, 智能体技能, 超级技能, 服务级, 音频处理, FmodeAgent, Hermes Agent, FmodeCode, Claude Code, ffmpeg, ffprobe, transcode, extract-audio]
 ---
 
 # Fmode FFmpeg — 音视频处理技能

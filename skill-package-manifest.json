@@ -1,7 +1,7 @@
 {
   "name": "skill-ffmpeg",
   "version": "1.1.0",
-  "description": "Claude Code 独立技能包：内置跨平台静态 ffmpeg/ffprobe 二进制（ffmpeg-static），无需系统安装即可转码、提取音轨、抽帧、裁剪、压缩，并用 ffprobe 探测媒体信息。",
+  "description": "FmodeCode / Claude Code 独立技能包：内置跨平台静态 ffmpeg/ffprobe 二进制（ffmpeg-static），无需系统安装即可转码、提取音轨、抽帧、裁剪、压缩，并用 ffprobe 探测媒体信息。",
   "plugin": "skill-ffmpeg",
   "skills": [
     "skill-ffmpeg"
@@ -14,6 +14,6 @@
   "workspaceSkillPath": ".claude/skills/skill-ffmpeg/SKILL.md",
   "globalSkillPath": "%USERPROFILE%/.claude/skills/skill-ffmpeg/SKILL.md",
   "installHint": "工作区安装：npx skill-ffmpeg@latest workspace，会写入 ./.claude/skills/skill-ffmpeg/。用户级安装：npx skill-ffmpeg@latest install，会写入 ~/.claude/skills/skill-ffmpeg/。二进制内置（ffmpeg-static/ffprobe-static），无需系统安装 ffmpeg；可用 FFMPEG_PATH/FFPROBE_PATH 覆盖。",
-  "license": "MIT",
+  "license": "MPL-2.0",
   "copyright": "Copyright (c) 2026 未来飞马 Fmode"
 }

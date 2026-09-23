@@ -1,11 +1,12 @@
 #!/usr/bin/env node
 // Copyright (c) 未来飞马
 //
-// Licensed under the MIT License. See LICENSE in the project root
-// for the full license text.
+// This Source Code Form is subject to the terms of the Mozilla Public
+// License, v. 2.0. If a copy of the MPL was not distributed with this
+// file, You can obtain one at https://mozilla.org/MPL/2.0/.
 //
 // Trademark Notice:
-// The MIT license grants copyright permissions for source code only.
+// The MPL-2.0 license grants copyright permissions for source code only.
 // It does NOT grant any rights to use trademarks including "未来飞马",
 // "Harness Loop", "RSI", and associated slogan "让AI进化提前发生，让AI落地快人一步".
 // Any use of these trademarks requires separate written permission.
@@ -176,7 +177,7 @@ function parseArgs(argv) {
 
 function printHelp() {
   console.log([
-    'skill-ffmpeg — bundled ffmpeg/ffprobe runner + Claude Code skill installer',
+    'skill-ffmpeg — bundled ffmpeg/ffprobe runner + FmodeCode / Claude Code skill installer',
     '',
     'Run ffmpeg / ffprobe (no system install needed):',
     '  npx skill-ffmpeg@latest which                      # print bundled ffmpeg binary path',
@@ -185,7 +186,7 @@ function printHelp() {
     '  npx skill-ffmpeg@latest probe -- -show_format in.mp4  # run ffprobe with passthrough args',
     '  npx skill-ffmpeg@latest version                    # print ffmpeg -version',
     '',
-    'Install the Claude Code skill:',
+    'Install the FmodeCode / Claude Code skill:',
     '  npx skill-ffmpeg@latest workspace [--smoke]   # install into ./.claude/skills/skill-ffmpeg',
     '  npx skill-ffmpeg@latest install [--smoke]     # install into ~/.claude/skills/skill-ffmpeg',
     '  npx skill-ffmpeg@latest install --target <dir> [--force]',
@@ -266,13 +267,13 @@ function printNextSteps(target) {
   console.log(`Skill installed at: ${target}`);
   console.log('');
   if (workspaceMode) {
-    console.log('Project-level skill is ready. Restart the VSCode Claude Code session if it was open.');
+    console.log('Project-level skill is ready. Restart the VSCode FmodeCode / Claude Code session if it was open.');
   } else {
-    console.log('User-level skill is ready for all Claude Code workspaces.');
+    console.log('User-level skill is ready for all FmodeCode / Claude Code workspaces.');
   }
   console.log('');
   console.log('ffmpeg is bundled (ffmpeg-static); no system install needed.');
-  console.log('Try this prompt in Claude Code:');
+  console.log('Try this prompt in FmodeCode / Claude Code:');
   console.log('  把 input.mp4 转成 16kHz 单声道 wav 音频。');
 }
 

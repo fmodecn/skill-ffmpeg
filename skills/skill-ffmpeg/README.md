@@ -1,6 +1,6 @@
 # skill-ffmpeg (skill)
 
-Claude Code skill that runs **ffmpeg / ffprobe** via a bundled static binary
+FmodeCode / Claude Code skill that runs **ffmpeg / ffprobe** via a bundled static binary
 (`ffmpeg-static` / `ffprobe-static`) — no system ffmpeg install required.
 
 See `SKILL.md` for the full skill definition and recipes. The helper module

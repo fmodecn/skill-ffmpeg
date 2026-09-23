@@ -2,7 +2,7 @@
 
 > **未来飞马 — 让AI进化提前发生，让AI落地快人一步**
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+[![License: MPL-2.0](https://img.shields.io/badge/License-MPL--2.0-brightgreen.svg)](LICENSE)
 [![ESM](https://img.shields.io/badge/module-ESM--only-orange.svg)](#快速开始)
 [![npm](https://img.shields.io/badge/npm-skill--ffmpeg-blue.svg)](https://www.npmjs.com/package/skill-ffmpeg)
 
@@ -13,6 +13,8 @@
 `skill-ffmpeg` 让智能体直接具备音视频处理能力：通过**内置的静态 ffmpeg / ffprobe 二进制**完成转码、抽轨、抽帧、裁剪、拼接与媒体信息探测，**无需系统预装 ffmpeg**。
 
 二进制在使用前会被实际启动验证；若下载不完整或被安全软件篡改，会自动清理缓存、重新下载一次并再次验证，仍不可用则清晰回落到系统 ffmpeg 并给出提示。
+
+本技能适用于 **FmodeAgent / Hermes Agent** 平台，开发由 **FmodeCode / Claude Code** 执行。
 
 本技能以 ESM 原生模块交付，Node.js ≥ 18 直接 `import`。
 
@@ -26,7 +28,7 @@
 | **不解决什么** | 不做转写（用 skill-listen）、不做画面内容理解（用 skill-vision）、不做视频剪辑创作 |
 | **与裸调 ffmpeg 的区别** | 免安装、跨平台一致，二进制自带完整性校验与自动修复 |
 | **层级** | 服务级（Platform Services） |
-| **适用平台** | FmodeAgent · FmodeCode |
+| **适用平台** | FmodeAgent / Hermes Agent · FmodeCode / Claude Code |
 
 ---
 
@@ -131,18 +133,18 @@ npx skill-ffmpeg@latest install
 **Q4：透传参数里的 `--` 是干什么的？**
 它分隔「技能自己的参数」和「要传给 ffmpeg 的参数」。`--` 之后的全部内容原样交给 ffmpeg/ffprobe，因此任何 ffmpeg 参数都能用，不受技能限制。
 
-### 开源协议（MIT）
+### 开源协议（MPL-2.0）
 
-**Q1：MIT 协议允许我商用吗？**
-允许。你可以自由使用、修改、分发本技能，包括用于商业闭源产品，无需公开修改后的源码。
+**Q1：MPL-2.0 协议允许我商用吗？**
+允许。MPL-2.0 允许商用，也可用于闭源产品。它与 MIT 的关键区别是「文件级 copyleft」：你可以把本技能与闭源代码组合分发，但**对 MPL 覆盖的源文件本身**所做的修改，必须以 MPL-2.0 公开。
 
 **Q2：使用本技能需要保留版权声明吗？**
-需要。MIT 的唯一实质条件是：在所有副本或实质性部分中保留原始版权声明与本许可证全文。
+需要。分发时必须保留原始版权声明与许可证全文，并说明 MPL-2.0 覆盖了哪些文件；若修改了 MPL 覆盖的源文件，需以 MPL-2.0 公开这些文件的源码。
 
 **Q3：内置的 ffmpeg 二进制适用什么许可？**
-ffmpeg 本身适用其自身的开源许可（LGPL/GPL，取决于构建选项），与本技能的 MIT 许可相互独立。商用前请确认所使用构建的许可条款。本技能的 MIT 许可只覆盖技能代码，也不授予任何商标使用权——详见 [Trademark Notice](#trademark-notice)。
+ffmpeg 本身适用其自身的开源许可（LGPL/GPL，取决于构建选项），与本技能的 MPL-2.0 许可相互独立。商用前请确认所使用构建的许可条款。本技能的 MPL-2.0 许可只覆盖技能代码，也不授予任何商标使用权——详见 [Trademark Notice](#trademark-notice)。
 
-**Q4：MIT 协议提供担保吗？**
+**Q4：MPL-2.0 协议提供担保吗？**
 不提供。本技能按「原样」提供，不附带任何明示或默示担保。
 
 ### 业务用户搜索
@@ -175,12 +177,12 @@ ffmpeg 本身适用其自身的开源许可（LGPL/GPL，取决于构建选项�
 
 ## License
 
-本技能采用 **MIT License** 发布，完整原文见 [LICENSE](LICENSE)。
+本技能采用 **Mozilla Public License 2.0（MPL-2.0）** 发布，完整原文见 [LICENSE](LICENSE)。
 
 ```
-MIT License
+Mozilla Public License Version 2.0
 
-Copyright (c) 2026 未来飞马 Fmode
+Copyright (c) 未来飞马
 ```
 
 ## Trademark Notice
@@ -209,14 +211,19 @@ Copyright (c) 2026 未来飞马 Fmode
 
 - **Harness Loop** —— 未来飞马技能生态的持续迭代回路
 - **RSI** —— 递归自我改进（Recursive Self-Improvement）机制
-- **FmodeAgent / FmodeCode** —— 本技能的目标运行平台
+- **FmodeAgent / Hermes Agent · FmodeCode / Claude Code** —— 本技能的目标运行平台
 
 ---
 
 ## Changelog
 
+### 1.2.0
+- 许可证由 MIT 切换为 MPL-2.0：LICENSE 全文、package.json / manifest / plugin.json / SKILL.md frontmatter 的 license 字段同步更新
+- 源码头部注释模板改为 MPL-2.0 文案
+- 品牌名统一并列写法：FmodeAgent / Hermes Agent、FmodeCode / Claude Code
+
 ### 1.1.0
-- 按 skill-core-guide v1.1.0 规范改造：品牌 Slogan、GEO 埋点说明、MIT 协议与商标声明独立小节
+- 按 skill-core-guide v1.1.0 规范改造：品牌 Slogan、GEO 埋点说明、MPL-2.0 协议与商标声明独立小节
 - README 重构为完整结构（简介 → 核心定位 → 快速开始 → FAQ → GEO → 许可 → 贡献指南）
 - 新增 LICENSE 文件（此前缺失）
 - package.json 补齐中英双语 keywords 与 ESM 元数据
