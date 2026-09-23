@@ -1,8 +1,15 @@
 {
   "name": "skill-ffmpeg",
-  "version": "0.1.2",
-  "description": "Claude Code skill: run ffmpeg/ffprobe for audio & video processing via a bundled static binary (ffmpeg-static). No system ffmpeg install required. Provides `npx skill-ffmpeg exec`/`probe`/`which` passthrough plus a Claude Code skill.",
+  "version": "1.1.0",
+  "description": "通过内置静态 ffmpeg/ffprobe 二进制处理音视频，无需系统安装 ffmpeg。支持转码、提取音轨、抽帧、裁剪拼接压缩与媒体信息探测，二进制自带完整性校验与自动修复。",
   "type": "commonjs",
+  "main": "./skills/skill-ffmpeg/scripts/ffmpeg-runner.mjs",
+  "exports": {
+    ".": {
+      "import": "./skills/skill-ffmpeg/scripts/ffmpeg-runner.mjs",
+      "default": "./skills/skill-ffmpeg/scripts/ffmpeg-runner.mjs"
+    }
+  },
   "bin": {
     "skill-ffmpeg": "bin/skill-ffmpeg.js"
   },
@@ -18,27 +25,47 @@
     "skills/"
   ],
   "keywords": [
-    "claude-code",
-    "claude-skill",
     "fmode",
+    "hermes",
+    "harness-loop",
+    "rsi",
+    "ai-agent",
+    "agent-skill",
+    "super-skill",
+    "esm",
+    "future-feima",
     "ffmpeg",
     "ffprobe",
     "ffmpeg-static",
     "audio",
     "video",
-    "transcode"
+    "transcode",
+    "extract-audio",
+    "frame",
+    "未来飞马",
+    "智能体技能",
+    "超级技能",
+    "音视频处理",
+    "格式转换",
+    "提取音轨",
+    "视频抽帧",
+    "音频处理"
   ],
+  "author": "Yuyang001 (FmodeAgent)",
   "license": "MIT",
-  "dependencies": {
-    "ffmpeg-static": "5.3.0",
-    "ffprobe-static": "3.1.0"
-  },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/fmodecn/skill-ffmpeg.git"
+    "url": "git+ssh://git@github.com/fmodecn/skill-ffmpeg.git"
   },
   "homepage": "https://github.com/fmodecn/skill-ffmpeg#readme",
   "bugs": {
     "url": "https://github.com/fmodecn/skill-ffmpeg/issues"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "ffmpeg-static": "5.3.0",
+    "ffprobe-static": "3.1.0"
   }
 }

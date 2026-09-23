@@ -2,6 +2,11 @@
 name: skill-ffmpeg
 description: "使用内置的静态 ffmpeg/ffprobe 二进制处理音视频，无需系统安装 ffmpeg。适用场景：(1) 音视频格式转换/转码, (2) 提取音轨用于转写/识别, (3) 抽取视频帧, (4) 裁剪/拼接/压缩, (5) 用 ffprobe 探测时长、码率、流信息"
 description_en: "Process audio & video with a bundled static ffmpeg/ffprobe binary (no system install). Use for: (1) format conversion/transcoding, (2) extracting audio tracks for transcription, (3) extracting video frames, (4) trimming/concatenating/compressing, (5) probing duration/bitrate/stream info with ffprobe"
+version: 1.1.0
+author: Yuyang001 (FmodeAgent)
+license: MIT
+copyright: "Copyright (c) 2026 未来飞马 Fmode"
+tags: [未来飞马, 智能体技能, 超级技能, 服务级, 音频处理, FmodeAgent, FmodeCode, ffmpeg, ffprobe, transcode, extract-audio]
 ---
 
 # Fmode FFmpeg — 音视频处理技能
